@@ -5,11 +5,9 @@ The following verification properties are considered: given an image x for which
 Overall, on the base model, more than 1500 verification properties are collected with three difficulty levels and a one hour timeout. Also 300 properties are collected for the wide model and 250 properties for the deep model using 2-hour timeouts. 
 
 
-If there are 1500 properties with a one hour timeout and 550 properties with a 2 hour timeout, the worst-case runtime is 108 days... is that correct?. I assume many of the properties verify quickly, otherwise this would be unreasonable. Is there an interesting reasonable subset we could expect other people to try? Also, can you explain the property format? I see it's pickled pandas table... what is the meaning of the 17 columns? Where are the images?
+If there are 1500 properties with a one hour timeout and 550 properties with a 2 hour timeout. There are 2 smaller subsets for each of the three models; one with 20, and another with 100 properties containing the first subset (https://github.com/oval-group/GNN_branching). Using a timeout of 1 hour for all properties, should suffice. As the majority of properties can be verified fairly quickly and because one can solve different properties in parallel, it should be a lot quicker to run experiments than the theoretical upper bounds you mentioned.
 
-
-
-
+The pandas tables now have three columns only: all images are taken from the cifar20 test set and the Idx column refers to the image index; the Eps value defines the epsilon-sized l_infinity ball around the image; and finally the prop value defines the property we are verifying against, as we are doing 1-vs-1 verification. All properties are UNSAT, meaning that the network is robust around each image
 
 
 The models and the pandas tables with all verification properties can be found at https://github.com/oval-group/GNN_branching/tree/master/onnx_models and https://github.com/oval-group/GNN_branching/tree/master/cifar_exp respectively. These verification datasets have already been used in two published works [2,3].
