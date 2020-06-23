@@ -1,5 +1,5 @@
 This folder contains three fully-connected ReLU networks trained with
-the MNIST dataset. 
+the MNIST dataset. Also check the dropbox for the latest changes: https://www.dropbox.com/sh/d6q4pbycexizz41/AAAcYN2R6mG2_kQxqZ3Y3i7ra?dl=0
 
 Models are provided in both nnet and ONNX format.  Input images'
 pixels are assumed to be floats between 0 and 1. No further
