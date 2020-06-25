@@ -30,12 +30,11 @@ So one for safe and one for unsafe for each network; resulting in a total of 6 p
 
 
 Steps:
-1. Change the epsilon values. I originally suggested 0.01, 0.03 and 0.05. The first is easy and mostly safe, the second is difficult and about 50/50 safe/unsafe and the last is mostly unsafe and easy for some toolkits, difficult for others. Instead, we could use 0.02 (Mostly safe but not as easy as 0.01) and 0.05.
+1. Change the epsilon values. Originally suggested values were 0.01, 0.03 and 0.05. The first is easy and mostly safe, the second is difficult and about 50/50 safe/unsafe and the last is mostly unsafe and easy for some toolkits, difficult for others. Instead, we could use 0.02 (Mostly safe but not as easy as 0.01) and 0.05.
 2. Reduce from 50 to 25 input images for each epsilon-network combination.
 3. Reduce the timeout to 15 minutes.
 
-This should reduce the worst-case performance to about 1.5 days and I expect all toolkits to finish in less than 1 day.
-Having different timeouts for different cases is, in my opinion, unfortunate as it may make the results more difficult to interpret.
+This should reduce the worst-case performance to about 1.5 days and the expection is all toolkits to finish in less than 1 day.
 
 
   
