@@ -20,7 +20,7 @@ benchmarks are:
 50 images and their corresponding labels are drawn from the MNIST test-set in csv format from this folder ; all of the images are classified correctly by all three networks.
 
 
-I agree that images with long runtimes are more interesting than short runtimes; however, for several use-cases, the verification times for "easy" images are also important. For example, in adversarial training, we may want to use a verification algorithm to locate a large number of unsafe cases but don't really care about precision. The visualisation mentioned above should make it clear whether toolkits perform well for only "easy" or "difficult" cases, so in my opinion, we should include both.
+Images with long runtimes are more interesting than short runtimes; however, for several use-cases, the verification times for "easy" images are also important. For example, in adversarial training, we may want to use a verification algorithm to locate a large number of unsafe cases but don't really care about precision. The visualisation mentioned above should make it clear whether toolkits perform well for only "easy" or "difficult" cases, so in my opinion, we should include both.
 
 
 Regarding the reporting, a plot of the number of cases solved as a function of time may be the best way to visualise the results. Plotting safe, unsafe and all epsilons separately is unnecessary; however, it may be better to merge different epsilon values into one plot than merging safe/ unsafe. The reason is that, in my experience, toolkits vary a lot on safe/ unsafe, but usually have a similar relative performance over different epsilon values. 
